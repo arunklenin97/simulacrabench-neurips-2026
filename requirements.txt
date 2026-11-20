@@ -1,0 +1,1 @@
+# nothing to install: numpy, pandas, scipy, scikit-learn and torch are in the hosted image; tabicl, tabpfn, einops and the pydantic stack are bundled under vendor/ and vendor_pd/

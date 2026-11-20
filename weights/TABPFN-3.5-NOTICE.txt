@@ -1,0 +1,2 @@
+The TABPFN-3.5 Model is licensed by Prior Labs GmbH under the TABPFN-3.5 Non-Commercial License. Copyright (c) Prior Labs GmbH 2026.
+Source: https://huggingface.co/Prior-Labs/tabpfn_3_5 (file tabpfn-v3.5-fast-20260909.safetensors, unmodified). Used here for a data science competition (licence section 1c).
