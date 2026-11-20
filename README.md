@@ -8,6 +8,8 @@ completion), with the technical report.
 - **Submitted code:** the tag [`v70-submission`](../../tree/v70-submission) holds exactly the files of the submitted
   archive, except for the TabPFN-3.5 weight file, which is not redistributed (see below). `paper.pdf` was added to
   `main` after the submission and is not part of the submitted archive.
+- **Supplementary material:** [`supplementary/`](supplementary/) holds a development ledger (v0 to v70) and the local
+  benchmark generators and runner. It was added after the submission and is not part of the submitted archive.
 
 ## Contents
 - `main.py`: the submission. The platform calls `predict(frame, schema)` once per instrument.

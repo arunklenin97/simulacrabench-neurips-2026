@@ -20,7 +20,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-This licence covers main.py only. Third-party code under vendor/ and
+This licence covers main.py and supplementary/ (added after submission). Third-party code under vendor/ and
 vendor_pd/ keeps its own licence (vendor/README.txt, vendor/LICENSES/). The
 TabPFN-3.5 weights are not included; they are licensed by Prior Labs GmbH under
 the TabPFN-3.5 Non-Commercial License (weights/TABPFN-3.5-LICENSE.txt).

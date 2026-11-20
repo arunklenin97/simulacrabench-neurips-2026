@@ -1,0 +1,46 @@
+version,change,development_readout_and_verdict
+v0,Organiser marginal baseline,not uploaded
+v1,"Per-item LR + skip logic, joblib processes",failed (workers could not import main)
+v2,v1 with threads,old .51/.49/.82 = 0.61
+v3,Torch linear + shared MLP + profile + OOF per-item blend,old .52/.49/.90 = 0.64; readout step
+v4,"Per-column conditionals, 5 seeds",0.64; null
+v5,Exact gate factorisation through declared parents,"0.59; readout loss, reverted"
+v6,Gate hybrid + ExtraTrees + cells,0.64; null
+v7,+ bundled TabICLv2,.52/.50/.90; W edge
+v8,+ 3x512 seed-averaged trunk (UNHCR),.52/.50/.91; H +0.01 (same on 3 later reads)
+v9-v12,Wide MLP; LightGBM + band smoothing + recalibration; shift weights; file-order recency,0.64; null (shift/order premises closed: rows shuffled)
+v13,Support caps + HistGB (UNHCR),0.64; null
+v14,Latent classes + 4x1024 + round trunk,0.64; null
+v15,Broad TabICL on UNHCR + per-head checkpoints,.52/.49/.91; null
+v16,TabPFN-3.5 + workload-weighted time split,.52/.49/.91; null
+v17,"Fail-loud TabPFN, throughput, adaptive folds; scale change","0.4700 (same U, W-L, H 0.8264=0.91); TabPFN runs on host; null"
+v18,Data-verified soft gates,0.4828 (H 0.8650=0.93); UNHCR readout +0.02
+v19,v8 stack + soft gates,"0.4828; same readout as v18 without TabPFN"
+v20,Data-chosen routing parent,0.4878 (W-H)
+"v21-v22, v24, v26",Wider/joint routing; chain answers; post-blend chain,0.4878 or not uploaded; null
+v23,Routing off (ablation),0.4828 (W-L)
+v25,Stacked second-stage MLP,0.4828 (W-L); null
+v27,Anytime extra TabPFN passes/seeds,0.4878; timing proven
+v28,Final-phase rehearsal (no upload),"957 s wall, RSS 2.6-3.8 GB"
+v29-v31p,TabPFN context 20k; per-item log pooling; coverage probe,0.4878; null
+v32,Ordinal band smoothing,"local null, not built"
+v33,TabPFN off on UNHCR (ablation),0.4878; no readout change
+v34-v36,Anytime caps; 10 folds; 12 seeds,0.4828 (W-L); null
+v37,Fold-wise (cross-fitted) rules + beta-binomial residuals,0.4878; null
+v38,Pooled isotonic tail recalibration,0.4878; null
+v40/v41,Breakoff rows; stack v37+v38+v40,v41 0.4943 (H 0.8843); not repeated on later uploads
+v41g/xt/gx,Isolations,0.4878 / 0.4878 / 0.4828; null
+v44,Tempered mixture to countryxwave marginal,0.4878; null
+v46-v48,TabICL beside TabPFN; stack; full-context test pass,0.4878 / 0.4828 / 0.4828; null
+v49-v51,Order-aware GIVEN for in-context models; MLP order fix; dual-frame TabPFN,0.4878 / 0.4878 / 0.4828; null
+v52-v55,Kumo-Tabular small; int8/fp16 weights + gate-event TabPFN; lean zip; Kumo large,0.4828 / 0.4878 / 0.4878 / 0.4878; null
+v56-v59,Fail-loud Kumo-large ladder,v56/57 failed (timing); v58/59 0.4878
+v60,"Self-gated interaction columns (UNICEF, WB)",0.4878; null
+v61,Hardened phase detection,0.4878; mechanics
+v62-v64,TabPFN->MLP distillation; mask-and-recover MLP; both,0.4878 / 0.4878 / 0.4828; null
+v65,EB back-off cells; affine-mixing adjustment; UNHCR wave interactions,0.4878; null
+v66,Sibling gate pooling,0.4878; null
+v67,Fan-out-weighted parents; 4 seeds; ridge stack,0.4878; null
+v68,Audit fixes + typed ordinal heads,0.4828 (W-L); null
+v69,Copy-through + tracer candidates,0.4878; null
+v70,Final-phase hardening,0.4878 (after one transient platform error); final submission
