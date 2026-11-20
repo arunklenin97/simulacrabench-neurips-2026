@@ -1,8 +1,13 @@
 # SimulacraBench 2026: final submission
 
 Source code of our final-phase submission to the NeurIPS 2026 SimulacraBench competition (probabilistic survey
-completion). The files are exactly those of the submitted archive, except for the TabPFN-3.5 weight file, which is not
-redistributed (see below).
+completion), with the technical report.
+
+- **Technical report:** [`paper.pdf`](paper.pdf), "Data-Verified Routing and Anytime Ensembling for Probabilistic Survey
+  Completion".
+- **Submitted code:** the tag [`v70-submission`](../../tree/v70-submission) holds exactly the files of the submitted
+  archive, except for the TabPFN-3.5 weight file, which is not redistributed (see below). `paper.pdf` was added to
+  `main` after the submission and is not part of the submitted archive.
 
 ## Contents
 - `main.py`: the submission. The platform calls `predict(frame, schema)` once per instrument.
@@ -18,7 +23,6 @@ redistributed (see below).
    (`main.py` must sit at the archive root).
 
 Without the weight file the TabPFN candidate is skipped and the rest of the pipeline runs unchanged.
-The method is described in the accompanying technical report.
 
 ## Licence
 MIT for `main.py` (see `LICENSE`). Bundled third-party components keep their own licences. The TabPFN-3.5 weights are
